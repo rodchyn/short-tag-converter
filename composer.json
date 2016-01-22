@@ -1,0 +1,33 @@
+{
+    "name": "rodchyn/short-tag-converter",
+    "description": "Convert short tags to normal one.",
+    "type": "library",
+    "keywords": [
+        "short_open_tag",
+        "short",
+        "php",
+	"tags"
+    ],
+    "homepage": "https://github.com/rodchyn/short-tags-converter/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Antti Hukkanen",
+            "role": "author"
+        },
+	{
+	    "name": "Yura Rodchyn",
+	    "role": "contributor",
+            "email": "rodchyn@gmail.com"
+	}
+    ],
+    "support": {
+        "issues": "https://github.com/rodchyn/short-tags-converter/issues"
+    },
+    "require": {
+        "php": ">=5.3"
+    },
+    "bin": [
+        "short-tags-converter"
+    ]
+}

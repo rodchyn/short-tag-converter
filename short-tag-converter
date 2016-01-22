@@ -1,0 +1,29 @@
+#!/usr/bin/env php
+<?php
+
+require_once "stc.php";
+
+if(!ini_get("short_open_tag")) {
+        println("PHP setting short_open_tag should be set to On");
+	return 0;
+}
+
+if(isset($argv[1])) {
+	$path = getcwd() . "/" . $argv[1];
+} else {
+	$path = getcwd();
+}
+
+if(is_file($path)) {
+	println("File detected");
+	convert_file($path);
+	return 0;
+} elseif (is_dir($path)) {
+	println("Directory detected");
+	convert_dir($path, true);
+	return 0;
+} else {
+	var_dump($path);
+	println("Not a file or directory: \e[0;33m" . $path . "\e[0m");
+	return 1;
+}
